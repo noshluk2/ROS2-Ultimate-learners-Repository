@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/luqman/tb_nav_ws/install/navigation2_tb3/lib/python3.8/site-packages",
+        "/home/luqman/tb_nav_ws/install/cartographer_tb3/lib/python3.8/site-packages",
+        "/home/luqman/ros2_foxy/ros2-linux/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/tutorial_interfaces/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/py_service/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/my_robot_tutorials/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/basic_rera/lib/python3.8/site-packages",
+        "/home/luqman/ros2_workspace/install/autonomous_rover/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
+}
