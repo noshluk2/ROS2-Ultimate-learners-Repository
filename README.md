@@ -11,6 +11,6 @@ My name is Muhammad Luqman. Currently an Online Instructor in the field of ROBOT
 - After Clonning/forking the repo in **your_workspace/src/** then move to your_workspace(with cd ..) and perform colcon build
 
 ## List of Packages:
-* [custom_package](#custom-package)
-* [ros2_and_turtlesim_deep_dive](#ROS2-and-Turtlesim-Deep-Dive) 
+* 1 - [custom_package](#custom_package)
+* 2 - [ros2_and_turtlesim_deep_dive](#ros2_and_turtlesim_deep_dive) 
 
