@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cpp_turtlesim</name>
+  <version>1.0.0</version>
+  <description>A package to understand how to work with c++ ROS2 packages</description>
+  <maintainer email="noshluk2@gmail.com">luqman</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <!-- Luqman Added below 2 lines -->
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>turtlesim</depend>
+<!--  till here -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
