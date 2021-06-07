@@ -4,9 +4,9 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    package_dir = get_package_share_directory('basic_rera')
-    urdf = os.path.join(package_dir,'3_caster_2_wheel_plugins.urdf')
-    rviz_config_file=os.path.join(package_dir,'caster_2_wheel.rviz')
+    package_dir = get_package_share_directory('mr_rehri')
+    urdf = os.path.join(package_dir,'1_simple_rehri.urdf')
+    rviz_config_file=os.path.join(package_dir,'config.rviz')
 
     return LaunchDescription([
         Node(
