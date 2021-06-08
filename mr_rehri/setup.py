@@ -23,6 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            
+                 'obstacle_avoiding = mr_rehri.1_obstical_avoidence:main',
         ],
     },
 )

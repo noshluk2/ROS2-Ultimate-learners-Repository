@@ -27,12 +27,12 @@ def generate_launch_description():
             output='screen',
             ),
     # Added Rviz2 as well
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d',rviz_config_file],
-            output='screen'),
+        # Node(
+        #     package='rviz2',
+        #     executable='rviz2',
+        #     name='rviz2',
+        #     arguments=['-d',rviz_config_file],
+        #     output='screen'),
 #  Gazebo related stuff required to launch the robot in simulation
         ExecuteProcess(
             cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so'],
