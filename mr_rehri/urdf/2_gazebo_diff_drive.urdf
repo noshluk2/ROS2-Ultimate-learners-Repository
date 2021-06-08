@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
   <robot name="rehri">
 
-
+    <link name="base_footprint"/>
   <link name="base">
     <visual>
       <geometry>
@@ -23,7 +23,11 @@
       
     </collision>
   </link>
-
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base"/>
+    <origin rpy="0 0 0" xyz="0 0 0.135"/>
+  </joint>
   <link name="wheel_right_link">
     <inertial>
             <mass value="2" />

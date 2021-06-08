@@ -1,5 +1,5 @@
 <robot name="rehri">
-
+  <link name="base_footprint"/>
   <link name="base">
     <visual>
       <geometry>
@@ -17,7 +17,11 @@
       <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
     </collision>
   </link>
-
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base"/>
+    <origin rpy="0 0 0" xyz="0 0 0.135"/>
+  </joint>
   <link name="wheel_right">
     <inertial>
       <mass value="1"/>
