@@ -1,4 +1,4 @@
-<robot name="caster_2_wheel">
+<robot name="rehri">
 
   <link name="base">
     <visual>

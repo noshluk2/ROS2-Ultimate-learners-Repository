@@ -5,7 +5,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     package_dir = get_package_share_directory('mr_rehri')
-    urdf = os.path.join(package_dir,'1_simple_rehri.urdf')
+    urdf = os.path.join(package_dir,'2_gazebo_diff_drive.urdf')
     rviz_config_file=os.path.join(package_dir,'config.rviz')
 
     return LaunchDescription([
