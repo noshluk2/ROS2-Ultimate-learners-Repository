@@ -17,4 +17,5 @@ My name is Muhammad Luqman. Currently an Online Instructor in the field of ROBOT
 * 4 - [mr_rehri](#mr_rehri) 
 * 5 - [track_gazebo_worlds](#tracks_gazebo_worlds)
 * 6 - [tsc](#tsc)
+* 7 - [bazu](#bazu)
 
