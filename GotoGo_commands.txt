@@ -1,2 +1,2 @@
 ## for python package creation 
-ros2 pkg create urdf_tutorial --build-type ament_python --dependencies rclpy
+ros2 pkg create <package_name> --build-type ament_python --dependencies rclpy

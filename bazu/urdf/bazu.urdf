@@ -1,0 +1,270 @@
+<robot name="bazu">
+    <link name="world"/>
+    <joint name="base_joint" type="fixed">
+        <parent link="world"/>
+        <child link="base"/>
+      </joint>
+
+    <link name="base">
+        <inertial>
+          <mass value="20"/>
+          <inertia ixx="3" ixy="0" ixz="0" iyy="3" iyz="0" izz="0.3" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+        <geometry>
+        <mesh filename="package://bazu/base.stl"  />   
+            </geometry>
+          <material name="white">
+            <color rgba="1 1 1 1"/>
+          </material>
+        </visual>
+    
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/base.stl"  />   
+          </geometry>
+        </collision>
+      </link>
+  
+     
+
+
+
+
+  
+    <link name="link_1">
+        <inertial>
+          <mass value="4"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_1.stl"  />
+          </geometry>
+          <material name="black">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_1.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_1" type="continuous">
+        <parent link="base"/>
+        <child link="link_1"/>
+        <origin xyz="0 0 0.5" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 0 1"/>
+      </joint>
+  
+  
+      <link name="link_2">
+        <inertial>
+          <mass value="2"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_2.stl"  />
+          </geometry>
+          <material name="black">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_2.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_2" type="revolute">
+        <limit effort="1000.0"  lower='-2.6' upper='0.22'  velocity="0.5"/>
+        
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <origin xyz="0 0 0.2" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 1 0"/>
+        
+         
+      </joint>
+  
+  
+      <link name="link_3">
+        <inertial>
+          <mass value="2"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_3.stl"  />
+          </geometry>
+          <material name="white">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_3.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_3" type="revolute">
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <origin xyz="1.7 0 0.82" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 1 0"/>
+        <limit effort="1000.0"  lower='-0.9' upper='2.22' velocity="0.5"/>
+          
+      </joint>
+  
+  
+  
+      <link name="link_4">
+        <inertial>
+          <mass value="1"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_4.stl"  />
+          </geometry>
+          <material name="black">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_4.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_4" type="revolute">
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <origin xyz="-0.25 0 1.73" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 1 0"/>
+        <limit effort="1000.0"   lower='-1.65' upper='1.17'  velocity="0.5"/>
+        
+      </joint>
+  
+  
+  
+  
+      <link name="link_5">
+        <inertial>
+          <mass value="2"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_5.stl"  />
+          </geometry>
+          <material name="white">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_5.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_5" type="continuous">
+        <parent link="link_4"/>
+        <child link="link_5"/>
+        <origin xyz="0 0 0.45" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 0 1"/>
+      </joint>
+  
+  
+  
+  
+      <link name="link_6">
+        <inertial>
+          <mass value="1"/>
+          <inertia ixx="1" ixy="0" ixz="0" iyy="2.5" iyz="0" izz="0.5" />
+          <origin/>
+        </inertial>
+    
+        <visual>
+          <geometry>
+            <mesh filename="package://bazu/joint_6.stl"  />
+          </geometry>
+          <material name="black">
+          </material>
+        </visual>
+  
+        <collision>
+          <geometry>
+            <mesh filename="package://bazu/joint_6.stl"  />
+          </geometry>
+          <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
+        </collision>
+  
+      </link>
+  
+      <joint name="joint_6" type="revolute">
+        <parent link="link_5"/>
+        <child link="link_6"/>
+        <origin xyz="0 -0.02 0.55" rpy="0 0.0 0.0"/>
+        <axis xyz=" 0 1 0"/>
+        <limit effort="1000.0"  lower='-1.14' upper='0.73' velocity="0.5"/>
+        
+        
+      </joint>  
+
+<!-- 
+  
+  <gazebo reference="base">
+  <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="link_1">
+  <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="link_2">
+  <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="link_3">
+  <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="link_4">
+  <material>Gazebo/Blue</material>
+  </gazebo> 
+  <gazebo reference="link_5">
+    <material>Gazebo/White</material>
+  </gazebo> 
+  <gazebo reference="link_6">
+    <material>Gazebo/Orange</material>
+  </gazebo> 
+   -->
+  
+  </robot>
+  
