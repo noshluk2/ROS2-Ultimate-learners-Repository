@@ -24,6 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'trajectory_generator = bazu.trajectory_gen:main',
+
         ],
     },
 )

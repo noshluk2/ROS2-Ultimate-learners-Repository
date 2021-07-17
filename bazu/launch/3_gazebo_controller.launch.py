@@ -7,7 +7,7 @@ from launch.actions import ExecuteProcess
 
 def generate_launch_description():
     package_dir = get_package_share_directory('bazu')
-    urdf = os.path.join(package_dir,'bazu_gazebo.urdf')
+    urdf = os.path.join(package_dir,'bazu_Joint_trajectory_controller.urdf')
 
     with open(urdf, 'r') as infp:
         robot_desc = infp.read()
@@ -30,15 +30,15 @@ def generate_launch_description():
             executable='spawn_entity.py',
             name='urdf_spawner',
             output='screen',
-            arguments=["-topic", "/robot_description", "-entity", "bazu"])
-# #   Running the controllers in launch file
-#         ExecuteProcess(
-#             cmd=['ros2', 'control', 'load_controller', '--set-state', 'start','joint_state_broadcaster'],
-#             output='screen'
-#         ),
+            arguments=["-topic", "/robot_description", "-entity", "bazu"]),
+#   Running the controllers in launch file
+        ExecuteProcess(
+            cmd=['ros2', 'control', 'load_controller', '--set-state', 'start','joint_state_broadcaster'],
+            output='screen'
+        ),
 
-#         ExecuteProcess(
-#             cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'joint_trajectory_controller'],
-#             output='screen'
-#     )
+        ExecuteProcess(
+            cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'joint_trajectory_controller'],
+            output='screen'
+    )
   ])
