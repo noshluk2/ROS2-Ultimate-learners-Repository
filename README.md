@@ -18,4 +18,5 @@ My name is Muhammad Luqman. Currently an Online Instructor in the field of ROBOT
 * 5 - [track_gazebo_worlds](#tracks_gazebo_worlds)
 * 6 - [tsc](#tsc)
 * 7 - [bazu](#bazu)
+* 8 - [prius_sdc](#Toyota_prius_self_driving_car)
 
