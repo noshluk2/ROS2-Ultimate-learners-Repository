@@ -18,7 +18,9 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/luqman/ros2_workspace/src/self_driving_car_pkg/models/traffic_stand/meshes/traffic_light.dae</uri>
+            <!-- <uri>/home/luqman/ros2_workspace/src/self_driving_car_pkg/models/traffic_stand/meshes/traffic_light.dae</uri> -->
+            <uri>model://traffic_stand/meshes/traffic_light.dae</uri>
+
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -39,7 +41,8 @@
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/luqman/ros2_workspace/src/self_driving_car_pkg/models/traffic_stand/meshes/traffic_light.dae</uri>
+            <!-- <uri>/home/luqman/ros2_workspace/src/self_driving_car_pkg/models/traffic_stand/meshes/traffic_light.dae</uri> -->
+            <uri>model://traffic_stand/meshes/traffic_light.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
